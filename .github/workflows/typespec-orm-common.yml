@@ -6,6 +6,8 @@ on:
       - "packages/orm-common/**"
       - ".github/workflows/typespec-orm-common.yml"
       - ".github/workflows/module.yml"
+      - "package.json"
+      - "package-lock.json"
 
 permissions:
   id-token: write

@@ -6,6 +6,8 @@ on:
       - "packages/mongoose/**"
       - ".github/workflows/typespec-mongoose-emitter.yml"
       - ".github/workflows/module.yml"
+      - "package.json"
+      - "package-lock.json"
 
 permissions:
   id-token: write
