@@ -9,6 +9,7 @@
 		"packages/mongoose"
 	],
 	"scripts": {
+		"prepare": "lefthook install",
 		"build": "npm run build --workspaces",
 		"test": "vitest test --typecheck --run --no-isolate",
 		"pretest": "npm run build",
@@ -29,6 +30,7 @@
 		"@vitest/coverage-v8": "^4.1.7",
 		"c8": "^11.0.0",
 		"eslint": "^10.4.0",
+		"lefthook": "^2.1.9",
 		"mongoose": "^9.6.3",
 		"prettier": "^3.8.3",
 		"typescript-eslint": "^8.60.0",

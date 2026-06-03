@@ -1,4 +1,4 @@
-import {DecoratorContext, Model, ModelProperty, Scalar, createTypeSpecLibrary, type Type} from "@typespec/compiler";
+import {DecoratorContext, Model, ModelProperty, Scalar, createTypeSpecLibrary} from "@typespec/compiler";
 import {extractSchemaConfig} from "./decorators/schema.js";
 import {setIndexFlag} from "./decorators/index.js";
 import {
@@ -9,7 +9,7 @@ import {
 	$index as $ormIndex,
 	$unique as $ormUnique,
 } from "typespec-orm-common";
-import {isSchemaTimestampOverride, type SchemaTimestampOverride} from "./emitters/mongoose/timestamp.js";
+import {type SchemaTimestampOverride} from "./emitters/mongoose/timestamp.js";
 import {updateObject} from "./decorators/utils.js";
 
 export const $lib = createTypeSpecLibrary({
