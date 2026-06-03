@@ -1,0 +1,40 @@
+{
+	"name": "typespec-mongoose-emitter",
+	"version": "0.0.1",
+	"type": "module",
+	"tspMain": "./lib/main.tsp",
+	"main": "dist/src/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/src/index.d.ts",
+			"default": "./dist/src/index.js"
+		},
+		"./testing": {
+			"types": "./dist/src/testing/index.d.ts",
+			"default": "./dist/src/testing/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"lib"
+	],
+	"dependencies": {
+		"typespec-orm-common": "^0.0.1"
+	},
+	"peerDependencies": {
+		"@typespec/compiler": "latest"
+	},
+	"devDependencies": {
+		"typespec-orm-common": "file:../orm-common"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"test": "vitest test --typecheck --run --no-isolate",
+		"lint": "eslint src/ test/ --report-unused-disable-directives --max-warnings=0",
+		"lint:fix": "eslint . --report-unused-disable-directives --fix",
+		"format": "prettier .  --write",
+		"format:check": "prettier --check .",
+		"validate": "tsc --noEmit"
+	}
+}
