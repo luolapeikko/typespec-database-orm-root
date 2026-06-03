@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directories:
+      - "/packages/orm-common"
+      - "/packages/mongoose"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-name: "*"
+        dependency-type: "production"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]

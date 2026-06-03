@@ -1,0 +1,18 @@
+name: typespec-mongoose-emitter CI
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/mongoose/**"
+      - ".github/workflows/typespec-mongoose-emitter.yml"
+      - ".github/workflows/module.yml"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  module-flow:
+    uses: ./.github/workflows/module.yml
+    with:
+      package-path: packages/mongoose

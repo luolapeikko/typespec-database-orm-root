@@ -1,0 +1,18 @@
+name: typespec-orm-common CI
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/orm-common/**"
+      - ".github/workflows/typespec-orm-common.yml"
+      - ".github/workflows/module.yml"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  module-flow:
+    uses: ./.github/workflows/module.yml
+    with:
+      package-path: packages/orm-common
