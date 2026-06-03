@@ -24,9 +24,6 @@
 	"peerDependencies": {
 		"@typespec/compiler": "latest"
 	},
-	"devDependencies": {
-		"typespec-orm-common": "file:../orm-common"
-	},
 	"scripts": {
 		"build": "tsc",
 		"watch": "tsc --watch",
